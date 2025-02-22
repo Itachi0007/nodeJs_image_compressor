@@ -67,7 +67,6 @@ const processQueue = () => {
                 fs.writeFileSync(outputPath, csv);
 
                 console.log(`✅ CSV saved: ${outputPath}`);
-
                 await Request.findByIdAndUpdate(requestId, { status: "completed", outputCSV: outputPath });
             }
         })

@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "d1ea6526-3a25-4af1-8f88-42edf5c9f26e",
+		"name": "Spyne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13063515"
+	},
+	"item": [
+		{
+			"name": "status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/status/:requestId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"status",
+						":requestId"
+					],
+					"variable": [
+						{
+							"key": "requestId",
+							"value": "req_1740239977588"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "correct",
+							"type": "file",
+							"src": "/Users/ahmermehmood/Downloads/sample_upload.csv",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"description": "wrong",
+							"type": "file",
+							"src": "/Users/ahmermehmood/Downloads/sample_upload_wrong.csv",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"description": "wrong-2",
+							"type": "file",
+							"src": "/Users/ahmermehmood/Downloads/sample_upload_wrong_2.csv",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"description": "wrong-3",
+							"type": "file",
+							"src": "/Users/ahmermehmood/Downloads/sample_upload_wrong_3.csv",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/upload"
+			},
+			"response": []
+		}
+	]
+}
