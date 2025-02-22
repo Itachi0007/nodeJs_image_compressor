@@ -7,11 +7,12 @@ const { parse } = require("json2csv");
 
 const Product = require("../models/Product");
 const Request = require("../models/Request");
+const { log } = require("console");
 
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const processQueue = () => {
-    console.log("🔄 Image processing worker started!");
+    console.log("🌄 Image processing worker started!");
 
     const redisConnection = new IORedis({
         host: "localhost",
