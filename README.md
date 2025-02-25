@@ -3,6 +3,14 @@
 
 App to efficiently **process images** picked from `.csv` files and compresses them by 50%.
 
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Mongoose ORM)
+- **Queue Processing**: BullMQ + Redis
+- **File Handling**: Multer (CSV upload)
+- **Image Processing**: Sharp (Image compression)
+- **Storage**: Local file system (Can be extended to AWS S3)
+- **Validation**: CSV parsing and format validation
+
 The `.csv` file must have the following columns -
 1. Serial Number (Must be unique for each row).
 2. Product Name:- This will be a name of product against which we will
